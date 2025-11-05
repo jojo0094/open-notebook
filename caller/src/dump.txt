@@ -1,0 +1,57 @@
+ville_TUFLOW\repo\open-notebook\caller\src>uv run test.py
+2025-11-06 09:31:36,966 INFO caller.pdf_uploader - Uploading C:\Users\jkyawkyaw\OneDrive - mpdc.govt.nz\
+workspace\Projects\Morrinsville SW\Data\AsBuilts\GenAI\Pippins Stage 1a\Approved Engineering Plans Stage
+ 1A.PDF to http://localhost:5055/api/sources (async=True)
+INFO:caller.pdf_uploader:Uploading C:\Users\jkyawkyaw\OneDrive - mpdc.govt.nz\workspace\Projects\Morrins
+ville SW\Data\AsBuilts\GenAI\Pippins Stage 1a\Approved Engineering Plans Stage 1A.PDF to http://localhos
+t:5055/api/sources (async=True)
+INFO:caller.test:Upload response: {'ok': True, 'status_code': 200, 'sources': [{'id': 'source:x2xgvkd7rz
+65sfjn9qz3', 'title': 'Approved Engineering Plans Stage 1A.PDF', 'asset_file_path': None, 'asset_url': N
+one, 'embedded': False, 'embedded_chunks': 0, 'insights_count': 0, 'created': '2025-11-05 20:31:48.23867
+1+00:00', 'updated': '2025-11-05 20:31:48.410663+00:00', 'file_available': None, 'command_id': 'command:
+5zkqk28znf187bz8o8r7', 'status': 'new', 'processing_info': {'async': True, 'queued': True}, 'raw': {'id'
+: 'source:x2xgvkd7rz65sfjn9qz3', 'title': 'Approved Engineering Plans Stage 1A.PDF', 'topics': [], 'asse
+t': None, 'full_text': None, 'embedded': False, 'embedded_chunks': 0, 'file_available': None, 'created':
+ '2025-11-05 20:31:48.238671+00:00', 'updated': '2025-11-05 20:31:48.410663+00:00', 'command_id': 'comma
+nd:5zkqk28znf187bz8o8r7', 'status': 'new', 'processing_info': {'async': True, 'queued': True}, 'notebook
+s': None}}], 'raw': {'id': 'source:x2xgvkd7rz65sfjn9qz3', 'title': 'Approved Engineering Plans Stage 1A.
+PDF', 'topics': [], 'asset': None, 'full_text': None, 'embedded': False, 'embedded_chunks': 0, 'file_ava
+ilable': None, 'created': '2025-11-05 20:31:48.238671+00:00', 'updated': '2025-11-05 20:31:48.410663+00:
+00', 'command_id': 'command:5zkqk28znf187bz8o8r7', 'status': 'new', 'processing_info': {'async': True, '
+queued': True}, 'notebooks': None}}
+INFO:caller.test:Using source id: source:x2xgvkd7rz65sfjn9qz3
+INFO:caller.test:Creating session: http://localhost:5055/api/sources/source:x2xgvkd7rz65sfjn9qz3/chat/se
+ssions -> {'source_id': 'source:x2xgvkd7rz65sfjn9qz3', 'title': 'test-session-1762374708'}
+INFO:caller.test:Created session: chat_session:53zoqe3jd4e1keqsl8t7
+INFO:caller.test:POST http://localhost:5055/api/sources/source:x2xgvkd7rz65sfjn9qz3/chat/sessions/chat_s
+ession:53zoqe3jd4e1keqsl8t7/messages -> {"message": "Does this project include soakage or infiltration s
+ystems for stormwater disposal?\n\nLook for evidence of:\n- Soakage/infiltration systems\n- Product name
+s: GRAF, Atlantis, Stormtech, soakholes, soakage trenches\n- Terms: soakage, infiltration, percolation, 
+disposal to ground\n- Materials: geotextile-wrapped crates, permeable aggregate surrounds\n- Drawing tit
+les containing \"soakage\" or \"infiltration\"\n\nAnswer with YES or NO followed by a brief explanation 
+citing specific evidence from the documents."}
+INFO:caller.test:EVENT: {"type": "user_message", "content": "Does this project include soakage or infilt
+ration systems for stormwater disposal?\n\nLook for evidence of:\n- Soakage/infiltration systems\n- Prod
+uct names: GRAF, Atlantis, Stormtech, soakholes, soakage trenches\n- Terms: soakage, infiltration, perco
+lation, disposal to ground\n- Materials: geotextile-wrapped crates, permeable aggregate surrounds\n- Dra
+wing titles containing \"soakage\" or \"infiltration\"\n\nAnswer with YES or NO followed by a brief expl
+anation citing specific evidence from the documents.", "timestamp": null}
+INFO:caller.test:EVENT: {"type": "ai_message", "content": "Based on my analysis of the approved engineer
+ing plans document [source:x2xgvkd7rz65sfjn9qz3], I cannot provide a definitive answer about soakage or 
+infiltration systems.\n\n**UNABLE TO DETERMINE** - The source content appears to be limited or the docum
+ent may not contain sufficient detail for me to identify specific stormwater disposal systems, product n
+ames, or technical specifications you mentioned.\n\nTo properly answer whether this Stage 1A project inc
+ludes soakage/infiltration systems, I would need access to:\n- Detailed stormwater management drawings\n
+- Technical specifications\n- Civil engineering plans showing drainage systems\n- Any references to the 
+specific products or materials you listed (GRAF, Atlantis, Stormtech, etc.)\n\nThe document title indica
+tes these are \"Approved Engineering Plans Stage 1A,\" but without being able to review the actual plan 
+details, drawings, and specifications within the document, I cannot confirm the presence or absence of s
+oakage/infiltration systems.\n\nCould you help by pointing to specific sections or pages of the document
+ that might contain stormwater management details?", "timestamp": null}
+INFO:caller.test:EVENT: {"type": "context_indicators", "data": {"sources": ["source:x2xgvkd7rz65sfjn9qz3
+"], "insights": [], "notes": []}}
+INFO:caller.test:EVENT: {"type": "complete"}
+
+----
+from serve log. I saw that , the documet uplado is still ingestingembeddign? 
+os, study api again and chagne code in caller .. to ensure not to jump to 

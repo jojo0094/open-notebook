@@ -96,3 +96,4 @@ ignore = [
 [[tool.mypy.overrides]]
 module = "pages.*"
 ignore_errors = true
+
